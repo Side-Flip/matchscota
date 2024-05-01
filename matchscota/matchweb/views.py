@@ -7,6 +7,6 @@ from db_connection import db
 # Create your views here.
 
 def home(request):
-    return HttpResponse('<h1>hello world</h1>')
+    return render(request,'home.html')
 
 
