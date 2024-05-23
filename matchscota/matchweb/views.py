@@ -5,9 +5,11 @@ from django.contrib import messages
 from django.contrib.auth import login as auth_login, authenticate
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm, MascotaForm
 from db_connection import db
+from bson import ObjectId
 import bcrypt
+import json
 
 # Create your views here.
 
@@ -67,3 +69,45 @@ def login(request):
 @login_required
 def dashboard(request):
     return render(request, 'dashboard.html')
+
+@login_required
+def register_mascota(request):
+    if request.method == 'POST':
+        form = MascotaForm(request.POST)
+        if form.is_valid():
+            # extraer los campos del formulario
+            nombre = form.cleaned_data['nombre']
+            tipo = form.cleaned_data['tipo']
+            raza = form.cleaned_data['raza']
+            edad = form.cleaned_data['edad']
+            sexo = form.cleaned_data['sexo']
+            foto = form.cleaned_data['foto']
+            esquema_vacunacion = form.cleaned_data['esquema_vacunacion']
+            try:
+                esquema_vacunacion = json.loads(esquema_vacunacion)
+            except json.JSONDecodeError:
+                messages.error(request, 'El esquema de vacunacion debe ser un JSON valido')
+                return render(request, 'register_mascota.html', {'form':form})
+
+            # Insertar mascota en mongo
+            user_obj = User.objects.get(username=request.user.username)
+            user_mongo = db['User'].find_one({'name': user_obj.username})
+            id_usuario = user_mongo['_id']
+            mascotas_collection = db['Mascota']
+            mascota = {
+                'nombre': nombre,
+                'id_usuario': id_usuario,
+                'tipo': tipo,
+                'raza': raza,
+                'edad': edad,
+                'sexo': sexo,
+                'esquema_vacunacion': esquema_vacunacion,
+                'foto': foto
+            }
+            mascotas_collection.insert_one(mascota)
+            messages.success(request, 'el registro ha sido exitoso')
+            return redirect('dashboard')
+    else:
+        form = MascotaForm()
+    return render(request, 'register_mascota.html', {'form': form})
+
