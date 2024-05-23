@@ -20,8 +20,10 @@ def register(request):
         if form.is_valid():
             name = form.cleaned_data['name']
             password = form.cleaned_data['password']
+            
             #Encrypt the password
             hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+
             # Store the user in MondoDB
             users_collection = db['User']
             users_collection.insert_one({'name':name, 'password':hashed_password})
