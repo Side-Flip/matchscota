@@ -82,13 +82,14 @@ def register_mascota(request):
             edad = form.cleaned_data['edad']
             sexo = form.cleaned_data['sexo']
             foto = form.cleaned_data['foto']
+            '''
             esquema_vacunacion = form.cleaned_data['esquema_vacunacion']
             try:
                 esquema_vacunacion = json.loads(esquema_vacunacion)
             except json.JSONDecodeError:
                 messages.error(request, 'El esquema de vacunacion debe ser un JSON valido')
                 return render(request, 'register_mascota.html', {'form':form})
-
+            '''
             # Insertar mascota en mongo
             user_obj = User.objects.get(username=request.user.username)
             user_mongo = db['User'].find_one({'name': user_obj.username})
@@ -101,7 +102,7 @@ def register_mascota(request):
                 'raza': raza,
                 'edad': edad,
                 'sexo': sexo,
-                'esquema_vacunacion': esquema_vacunacion,
+                #'esquema_vacunacion': esquema_vacunacion,
                 'foto': foto
             }
             mascotas_collection.insert_one(mascota)

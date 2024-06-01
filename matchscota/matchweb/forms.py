@@ -15,4 +15,4 @@ class MascotaForm(forms.Form):
     raza = forms.CharField(max_length=100, required=False)
     sexo = forms.CharField(max_length=100)
     foto = forms.URLField()
-    esquema_vacunacion = forms.CharField(widget=forms.Textarea, help_text="Ingrese las vacunas en formato JSON", max_length=100)
+    #esquema_vacunacion = forms.CharField(widget=forms.Textarea, help_text="Ingrese las vacunas en formato JSON")
