@@ -112,3 +112,7 @@ def register_mascota(request):
         form = MascotaForm()
     return render(request, 'register_mascota.html', {'form': form})
 
+@login_required
+def chat(request):
+    context = {}
+    return render(request, "chat.html", context) 

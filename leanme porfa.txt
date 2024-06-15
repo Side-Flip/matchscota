@@ -1,11 +1,19 @@
 primero tener instalado python
 
-luego instalar django "pip install django"
+luego instalar django
+
+pip install django
+
+tambien hay que tener instalado pymongo para la conexion con la base de datos
+
+pip install pymongo
+
+pip install bcrypt
+
+Y instalar channels para manejar le comunicacion entre usuarios
+
+pip install channels
 
 para iniciar el proyecto usar
 
 python manage.py runserver
-
-ademas hay que tener instalado pymongo para la conexion con la base de datos
-
-pip install pymongo
