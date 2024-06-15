@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    background: transparent;
+
+}
+
+.listado h1{
+    font-size: 28px;
+    text-align: center;
+}
+
+.listado{
+    width: 420px;
+    height: 500px;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 30px;
+    padding: 30px 40px;
+    margin: 130px;
+    align-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.listado .mascota{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 30px;
+    padding: 30px 40px;
+}
+
+
+.menu{
+    height: 100vh;
+    background: #ffffff;
+    padding-top: 35%;
+}
+
+.menu button{
+    width: 150px;
+    height: 100px;
+    background: #82ccca44;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    cursor: pointer;
+    color: #146969;
+    font-size: 20px;
+    display: block; 
+}
