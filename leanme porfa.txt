@@ -1,0 +1,11 @@
+primero tener instalado python
+
+luego instalar django "pip install django"
+
+para iniciar el proyecto usar
+
+python manage.py runserver
+
+ademas hay que tener instalado pymongo para la conexion con la base de datos
+
+pip install pymongo
