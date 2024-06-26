@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './Perfil.css';
 import Logo from'./Logo.png';
 import Foto from'./silueta.jpg';
