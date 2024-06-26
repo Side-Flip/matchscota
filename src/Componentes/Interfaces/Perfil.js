@@ -1,6 +1,7 @@
 import React from 'react'
 import './Perfil.css';
 import Logo from'./Logo.png';
+import Foto from'./silueta.jpg';
 
 const Perfil = () => {
   return (
@@ -22,6 +23,7 @@ const Perfil = () => {
           </div>
           
         </div>
+
       </div>
 
       <div className='contenido'>
@@ -30,7 +32,26 @@ const Perfil = () => {
           <h1>¡Tus Mascotas!</h1>
           <div className='listado'>
             
-            <div className='mascota'> </div>
+            <div className='mascota'> 
+
+              <div className='foto'> 
+                <img className='foto' src={Foto} />
+              </div>
+
+              <div className='datos'>
+                <label className='nombre'>Nombre</label>
+                <label className='especie'>Especie</label>
+                <label className='sexo'>Sexo</label>
+              </div>
+
+              <div className='enlaces'>
+                <a href='editar'>Editar información</a>
+                <a href='ver'>Ver Detalles</a>
+                <a href='match'>MATCH</a>
+              </div>
+              
+            </div>
+
           </div>
         </div>
 
@@ -53,11 +74,8 @@ const Perfil = () => {
           </div>
           
         </div>
-      </div>
-      
-      
 
-      
+      </div>
 
     </div>
   )
