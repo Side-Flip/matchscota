@@ -28,29 +28,55 @@ const Chats = () => {
 
     <div className='contenido'>
 
-      <div>
+      <div className='todo'>
         <h1>¡Tus Chats!</h1>
-        <div className='listado'>
-          
-          <div className='mascota'> 
+        <div className='lista'>
 
-            <div className='foto'> 
-              <img className='foto' src={Foto} />
+          <div className='lista_m'>
+            <div className='mascota'> 
+
+              <div className='foto'> 
+                <img className='foto' src={Foto} />
+              </div>
+
+              <div className='datos'>
+                <label className='nombre_d'>Nombre dueño</label>
+                <label className='propietario'>propietario de: </label>
+              </div>
+
             </div>
 
-            <div className='datos'>
-              <label className='nombre'>Nombre</label>
-              <label className='especie'>Especie</label>
-              <label className='sexo'>Sexo</label>
+            <div className='mascota'> 
+
+              <div className='foto'> 
+                <img className='foto' src={Foto} />
+              </div>
+
+              <div className='datos'>
+                <label className='nombre_d'>Nombre dueño</label>
+                <label className='propietario'>propietario de: </label>
+              </div>
+
             </div>
 
-            <div className='enlaces'>
-              <a href='editar'>Editar información</a>
-              <a href='ver'>Ver Detalles</a>
-              <a href='match'>MATCH</a>
+            <div className='mascota'> 
+
+              <div className='foto'> 
+                <img className='foto' src={Foto} />
+              </div>
+
+              <div className='datos'>
+                <label className='nombre_d'>Nombre dueño</label>
+                <label className='propietario'>propietario de: </label>
+              </div>
+
             </div>
 
+
+            
           </div>
+          
+          
 
           <div className='mensajes'>
               
@@ -67,14 +93,19 @@ const Chats = () => {
             </div>
 
             <div className='chat'>
+              <div className='conversacion'></div>
+              
+            </div>
 
+            <div className='enviar_mensaje'>
+              <input type='text' placeholder='Escribe un mensaje'/>
             </div>
 
 
-            </div>
+          </div>
 
         </div>
-    </div>
+      </div>
 
       <div className='menu'>
         
