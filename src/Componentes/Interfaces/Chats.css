@@ -1,0 +1,178 @@
+
+.container{  
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    background: transparent;
+    width: 100vmax;
+}
+
+.estado{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.usuario{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.usuario .logo{
+    width: 80px;
+    height: 80px;
+
+}
+
+.usuario .nombre{
+    align-content: center;
+    font-size: 25px;
+    color: #146969;
+
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.contenido h1{
+    font-size: 28px;
+    text-align: center;
+    color: #146969;
+}
+
+.contenido h1{
+    font-size: 28px;
+    text-align: center;
+    color: #146969;
+}
+
+.listado{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: auto;
+    height: 430px;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 30px;
+    padding: 0 80px;
+    margin: 50px 150px;
+    align-content: center;
+    align-items: center;
+}
+
+.listado .mensajes{
+
+    width: 100%;
+    height: auto;
+    background: #82ccca44;
+    box-shadow: 0 0 1px rgba(0, 0, 0,.6);
+    color: #146969;
+    align-content: center;
+    align-items: center;
+    margin: 0 5px 0 5px;
+
+}
+
+.mensajes .chat{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background: #82ccca44;
+    box-shadow: 0 0 1px rgba(0, 0, 0,.6);
+    color: #146969;
+    align-content: center;
+    align-items: center;
+    margin: 15px 0 0 0;
+    overflow-y: scroll;
+}
+
+.mensajes .dueño{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.dueño .d_logo{
+    width: 50px;
+    height: 50px;
+
+}
+
+.dueño .d_nombre{
+    align-content: center;
+    font-size: 12px;
+    color: #146969;
+}
+
+.listado .mascota{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 50px;
+    align-content: center;
+    align-items: center;
+    margin: 15px 0 0 0;
+}
+
+.mascota .foto{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+ 
+.mascota .datos{
+    display: grid;
+    margin-left: 30px;
+}
+
+.datos label{
+    margin: 5px;
+    color: black;
+}
+
+.mascota .enlaces{
+    display: grid;
+    margin-left: 30px;
+    font-size: 12px;
+    color: #146969;
+}
+
+.enlaces a{
+    margin: 3px;
+    color: #146969;
+}
+
+.menu{
+    display: felx;
+    grid-template-columns:25% 25% 25% 25%;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    align-content: center;
+}
+
+.menu .btn1{
+    width: 150px;
+    height: 100px;
+}
+
+.menu button{
+    width: 150px;
+    height: 100px;
+    background: #82ccca44;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    cursor: pointer;
+    color: #146969;
+    font-size: 20px;
+    display: block; 
+}

@@ -4,11 +4,12 @@ import Mascotas from './Componentes/Registro/Mascotas';
 import Propietarios from './Componentes/Registro/Propietarios';
 import Perfil from './Componentes/Interfaces/Perfil';
 import Matchs from './Componentes/Interfaces/Matchs';
+import Chats from './Componentes/Interfaces/Chats';
 
 function App() {
   return (
     <div className="container">
-      <Matchs/>
+      <Chats/>
     </div>
   );
 }
