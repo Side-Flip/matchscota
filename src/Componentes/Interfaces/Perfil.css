@@ -31,24 +31,18 @@
 
 }
 
-.contenido{
+.contenido_p{
     display: grid;
     grid-template-columns: 75% 25%;
 }
 
-.contenido h1{
+.contenido_p h1{
     font-size: 28px;
     text-align: center;
     color: #146969;
 }
 
-.contenido h1{
-    font-size: 28px;
-    text-align: center;
-    color: #146969;
-}
-
-.listado{
+.listado_p{
     width: auto;
     height: 430px;
     background: #82ccca44;
@@ -62,7 +56,7 @@
     overflow-y: scroll;
 }
 
-.listado .mascota{
+.listado_p .mascota_p{
     display: flex;
     width: 100%;
     height: auto;
@@ -75,35 +69,35 @@
     margin: 15px 0 0 0;
 }
 
-.mascota .foto{
+.mascota_p .foto_p{
     width: 100px;
     height: 100px;
     border-radius: 50px;
 }
  
-.mascota .datos{
+.mascota_p .datos_p{
     display: grid;
     margin-left: 30px;
 }
 
-.datos label{
+.datos_p label{
     margin: 5px;
     color: black;
 }
 
-.mascota .enlaces{
+.mascota_p .enlaces_p{
     display: grid;
     margin-left: 30px;
     font-size: 12px;
     color: #146969;
 }
 
-.enlaces a{
+.enlaces_p a{
     margin: 3px;
     color: #146969;
 }
 
-.menu{
+.menu_p{
     display: felx;
     grid-template-columns:25% 25% 25% 25%;
     height: auto;
@@ -112,7 +106,7 @@
     align-content: center;
 }
 
-.menu button{
+.menu_p button{
     width: 150px;
     height: 100px;
     background: #82ccca44;

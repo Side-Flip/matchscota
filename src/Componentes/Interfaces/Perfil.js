@@ -26,25 +26,25 @@ const Perfil = () => {
 
       </div>
 
-      <div className='contenido'>
+      <div className='contenido_p'>
 
         <div>
           <h1>¡Tus Mascotas!</h1>
-          <div className='listado'>
+          <div className='listado_p'>
             
-            <div className='mascota'> 
+            <div className='mascota_p'> 
 
-              <div className='foto'> 
-                <img className='foto' src={Foto} />
+              <div className='foto_p'> 
+                <img className='foto_p' src={Foto} />
               </div>
 
-              <div className='datos'>
+              <div className='datos_p'>
                 <label className='nombre'>Nombre</label>
                 <label className='especie'>Especie</label>
                 <label className='sexo'>Sexo</label>
               </div>
 
-              <div className='enlaces'>
+              <div className='enlaces_p'>
                 <a href='editar'>Editar información</a>
                 <a href='ver'>Ver Detalles</a>
                 <a href='match'>MATCH</a>
@@ -55,7 +55,7 @@ const Perfil = () => {
           </div>
         </div>
 
-        <div className='menu'>
+        <div className='menu_p'>
           
           <div className='btn'>
             <button type='agregar'>Agregar</button>

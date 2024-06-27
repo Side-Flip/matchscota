@@ -46,25 +46,25 @@ const Matchs = () => {
 
       </div>
 
-      <div className='contenido'>
+      <div className='contenido_m'>
 
         <div>
 
-          <div className='listado'>
+          <div className='listado_m'>
             
-            <div className='mascota'> 
+            <div className='mascota_m'> 
 
-              <div className='foto'> 
-                <img className='foto' src={Foto} />
+              <div className='foto_m'> 
+                <img className='foto_m' src={Foto} />
               </div>
 
-              <div className='datos'>
+              <div className='datos_m'>
                 <label className='nombre'>Nombre</label>
                 <label className='especie'>Especie</label>
                 <label className='sexo'>Sexo</label>
               </div>
 
-              <div className='enlaces'>
+              <div className='enlaces_m'>
                 <a href='ubicacion'>En Giron</a>
                 <a href='ver'>Ver Detalles</a>
                 <a href='match'>MATCH</a>
@@ -75,7 +75,7 @@ const Matchs = () => {
           </div>
         </div>
 
-        <div className='menu'>
+        <div className='menu_m'>
           
           <div className='seleccion'>
           <select> 

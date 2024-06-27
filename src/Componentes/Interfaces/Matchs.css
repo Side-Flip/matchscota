@@ -31,9 +31,6 @@
 
 }
 
-.busqueda .filtro{
-    
-}
 
 .busqueda select{
     height: 30px;
@@ -61,24 +58,18 @@
 
 }
 
-.contenido{
+.contenido_m{
     display: grid;
     grid-template-columns: 75% 25%;
 }
 
-.contenido h1{
+.contenido_m h1{
     font-size: 28px;
     text-align: center;
     color: #146969;
 }
 
-.contenido h1{
-    font-size: 28px;
-    text-align: center;
-    color: #146969;
-}
-
-.listado{
+.listado_m{
     width: auto;
     height: 430px;
     background: #82ccca44;
@@ -92,7 +83,7 @@
     overflow-y: scroll;
 }
 
-.listado .mascota{
+.listado_m .mascota_m{
     display: flex;
     width: 100%;
     height: auto;
@@ -105,35 +96,35 @@
     margin: 15px 0 0 0;
 }
 
-.mascota .foto{
+.mascota_m .foto_m{
     width: 100px;
     height: 100px;
     border-radius: 50px;
 }
  
-.mascota .datos{
+.mascota_m .datos_m{
     display: grid;
     margin-left: 30px;
 }
 
-.datos label{
+.datos_m label{
     margin: 5px;
     color: black;
 }
 
-.mascota .enlaces{
+.mascota_m .enlaces_m{
     display: grid;
     margin-left: 30px;
     font-size: 12px;
     color: #146969;
 }
 
-.enlaces a{
+.enlaces_m a{
     margin: 3px;
     color: #146969;
 }
 
-.menu{
+.menu_m{
     display: felx;
     grid-template-columns:25% 25% 25% 25%;
     height: auto;
@@ -142,12 +133,12 @@
     align-content: center;
 }
 
-.menu .seleccion{
+.menu_m .seleccion{
     width: 150px;
     height: 100px;
 }
 
-.menu select{
+.menu_m select{
     height: 30px;
     background: #82ccca88;
     border-radius: 8px;
@@ -159,7 +150,7 @@
 
 }
 
-.menu button{
+.menu_m button{
     width: 150px;
     height: 100px;
     background: #82ccca44;
