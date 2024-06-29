@@ -9,5 +9,6 @@ urlpatterns = [
     path('dashboard/', views.dashboard, name='dashboard'),
     path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
     path('dashboard/register_mascota/', views.register_mascota, name='register_mascota'),
-    path('chat/', views.chat, name='chat')
+    path('chat/', views.chat, name='chat'),
+    path('search/', views.search, name='search')
 ]

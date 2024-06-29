@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import login as auth_login, authenticate
@@ -115,4 +116,47 @@ def register_mascota(request):
 @login_required
 def chat(request):
     context = {}
-    return render(request, "chat.html", context) 
+    return render(request, "chat.html", context)
+
+@login_required
+def search(request):
+    query = {}
+    nombre = request.GET.get('nombre','')
+    edad = request.GET.get('edad','')
+    sexo = request.GET.get('sexo','')
+    raza = request.GET.get('raza','')
+    tipo = request.GET.get('tipo','')
+    
+    mascotas_collection = db['Mascota']
+    usuarios_collection = db['User']
+
+    #Resultados de la busqueda
+    results = []
+    #Construir el filtro de busqueda
+    if nombre:
+        query['nombre'] = {'$regex': nombre, '$options': 'i'}
+    if edad:
+        try:
+            query['edad'] = int(edad)
+        except ValueError:
+            pass
+    if sexo:
+        query['sexo'] = {'$regex': sexo, '$options': 'i'}
+    if raza:
+        query['raza'] = {'$regex': raza, '$options': 'i'}
+    if tipo:
+        query['tipo'] = {'$regex': tipo, '$options': 'i'}
+
+    mascotas = mascotas_collection.find(query)
+    for mascota in mascotas:
+        usuario = usuarios_collection.find_one({'_id': mascota['id_usuario']})
+        if usuario:
+            results.append({
+                'nombre': mascota['nombre'],
+                'tipo': mascota['tipo'],
+                'raza': mascota['raza'],
+                'edad': mascota['edad'],
+                'sexo': mascota['sexo'],
+                'usuario': usuario['name']
+            })
+    return JsonResponse({'resultado':results})
