@@ -2,6 +2,8 @@ import React from 'react'
 import './Chats.css';
 import Logo from'./Logo.png';
 import Foto from'./silueta.jpg';
+import { Link, Redirect } from 'react-router-dom';
+import { FiLogOut } from "react-icons/fi";
 
 const Chats = () => {
   return (
@@ -20,6 +22,10 @@ const Chats = () => {
         
         <div className='nombre'>
           <label >José Luis</label>
+        </div>
+
+        <div className='salir'>
+        <FiLogOut/>
         </div>
         
       </div>
@@ -114,15 +120,19 @@ const Chats = () => {
         </div>
         
         <div className='btn'>
-          <button type='chat'>Chats</button>
+          <button className='chats' type='chat'>Chats</button>
         </div>
         
         <div className='btn'>
-          <button type='match'>Match</button>
+          <button type='match'>
+            <Link className='match' to={'/matchs'}>Match</Link> 
+          </button>
         </div>
         
         <div className='btn'>
-          <button type='tus-mascotas'>¡Tus Mascotas!</button>
+          <button type='tus-mascotas'>
+           <Link className='mascotas' to={'/perfil'}>¡Tus Mascotas!</Link>
+          </button>
         </div>
         
       </div>

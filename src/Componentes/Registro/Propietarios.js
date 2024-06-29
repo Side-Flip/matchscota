@@ -1,5 +1,6 @@
 import React from 'react'
 import './Propietarios.css'
+import { Link } from 'react-router-dom'
 
 const Propietarios = () => {
   return (
@@ -29,8 +30,12 @@ const Propietarios = () => {
             <div className='box-p-c'>
                 <input className='correo' type='text' placeholder='Correo elctrónico' required/>
             </div>
+
+            <button type='atras'> <Link className='atras' to={'/'}>Atras</Link> </button>
     
-            <button type='registrarse'>Registrarse</button>
+            <button type='registrarse' onClick={() => alert('¡Registro exitoso!')}> 
+                <Link className='registro' to={'/mascotas'}>Registrarse</Link> 
+            </button>
             </form>
     </div>
   )

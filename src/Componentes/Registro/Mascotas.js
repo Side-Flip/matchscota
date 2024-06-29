@@ -1,6 +1,7 @@
 import React from 'react';
 import './Mascotas.css';
 import silueta from'./silueta.jpg';
+import { Link } from 'react-router-dom';
 
 const Mascotas = () => {
   return (
@@ -54,11 +55,14 @@ const Mascotas = () => {
       </div>
 
       <div className='Imagen'>
+        
         <img className='silueta' src={silueta} width="100" height="100" />
 
-        <button type='registrarse'>Registrar</button>
-        
-        <a href='#'>Omitir por ahora</a>
+        <button type='registrarse' onClick={() => alert('¡Registro exitoso!')}>
+            <Link className='registro' to={'/perfil'}>Registrarse</Link>
+        </button>
+
+        <Link className='omitir' to={'/perfil'}>Omitir por ahora</Link>
 
       </div>
     </div>

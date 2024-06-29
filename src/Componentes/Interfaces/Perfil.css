@@ -31,6 +31,12 @@
 
 }
 
+.usuario .salir{
+    width: 80px;
+    height: 80px;
+    align-content: center;
+}
+
 .contenido_p{
     display: grid;
     grid-template-columns: 75% 25%;
@@ -116,4 +122,27 @@
     color: #146969;
     font-size: 20px;
     display: block; 
+}
+
+.menu_p .mascotas{
+    background:#0f7f94; 
+    color: white;
+}
+
+.menu_p .agregar{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu_p .chats{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu_p .match{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
 }

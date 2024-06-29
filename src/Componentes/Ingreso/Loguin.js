@@ -3,6 +3,7 @@ import './Loguin.css';
 import { FaUserCircle, FaLock } from "react-icons/fa";
 import Inicio from'./Inicio.jpg';
 import Logo from'./Logo.png';
+import { Link } from 'react-router-dom';
 
 const Loguin = () => {
   return (
@@ -34,9 +35,9 @@ const Loguin = () => {
                 <div className='recordar-contrasena'>
                     <a href='#'>¿Olvidó su contraseña?</a>
                 </div>
-                <button type='entrar'>Ingresar</button>
+                <button type='entrar'> <Link className='ingreso' to={'/perfil'}>Ingresar</Link> </button>
         
-                <button type='registrarse'>Registrarse</button>
+                <button type='registrarse'> <Link className='registro' to={'/propietarios'}>Registrarse</Link> </button>
             </form>
         </div>
     </div>

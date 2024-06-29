@@ -7,8 +7,7 @@
     color: #146969;
     border-radius: 30px;
     padding: 30px 40px;
-    margin: 130px;
-    justify-content: center;
+    margin: 0 auto
 }
 
 .container-p h1{
@@ -70,6 +69,18 @@
     cursor: pointer;
     color: white;
     font-size: 16px;
-    display: block; 
-    margin: 0 auto;
+    margin: 30px 60px 0 50px;
+
+}
+
+.container-p .atras{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.container-p .registro{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import './Perfil.css';
 import Logo from'./Logo.png';
 import Foto from'./silueta.jpg';
+import { Link } from 'react-router-dom';
+import { FiLogOut } from "react-icons/fi";
 
 const Perfil = () => {
   return (
@@ -19,7 +21,11 @@ const Perfil = () => {
           </div>
           
           <div className='nombre'>
-           <label >José Luis</label>
+            <label >José Luis</label>
+          </div>
+
+          <div className='salir'>
+            <FiLogOut />
           </div>
           
         </div>
@@ -58,19 +64,25 @@ const Perfil = () => {
         <div className='menu_p'>
           
           <div className='btn'>
-            <button type='agregar'>Agregar</button>
+            <button type='agregar'>
+              <Link className='agregar' to={'/mascotas'}>Agregar</Link> 
+            </button>
           </div>
           
           <div className='btn'>
-            <button type='chat'>Chats</button>
+            <button type='chat'>
+              <Link className='chats' to={'/chats'}>Chats</Link>   
+            </button>
           </div>
           
           <div className='btn'>
-            <button type='match'>Match</button>
+            <button type='match'>
+              <Link className='match' to={'/matchs'}>Match</Link> 
+            </button>
           </div>
           
           <div className='btn'>
-            <button type='tus-mascotas'>¡Tus Mascotas!</button>
+            <button className='mascotas' type='tus-mascotas'>¡Tus Mascotas!</button>
           </div>
           
         </div>

@@ -2,6 +2,8 @@ import React from 'react'
 import './Matchs.css';
 import Logo from'./Logo.png';
 import Foto from'./silueta.jpg';
+import { Link } from 'react-router-dom';
+import { FiLogOut } from "react-icons/fi";
 
 const Matchs = () => {
   return (
@@ -40,6 +42,10 @@ const Matchs = () => {
           
           <div className='nombre'>
            <label >José Luis</label>
+          </div>
+
+          <div className='salir'>
+            <FiLogOut />
           </div>
           
         </div>
@@ -84,15 +90,19 @@ const Matchs = () => {
           </div>
           
           <div className='btn'>
-            <button type='chat'>Chats</button>
+            <button type='chat'>
+              <Link className='chats' to={'/chats'}>Chats</Link>  
+            </button>
           </div>
           
           <div className='btn'>
-            <button type='match'>Match</button>
+            <button className='match' type='match'>Match</button>
           </div>
           
           <div className='btn'>
-            <button type='tus-mascotas'>¡Tus Mascotas!</button>
+            <button type='tus-mascotas'>
+              <Link className='mascotas' to={'/perfil'}>¡Tus Mascotas!</Link>
+            </button>
           </div>
           
         </div>

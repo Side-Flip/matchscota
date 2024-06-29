@@ -31,6 +31,11 @@
 
 }
 
+.usuario .salir{
+    width: 80px;
+    height: 80px;
+    align-content: center;
+}
 
 .busqueda select{
     height: 30px;
@@ -160,4 +165,22 @@
     color: #146969;
     font-size: 20px;
     display: block; 
+}
+
+.menu_m .mascotas{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu_m .chats{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu_m .match{
+    background: #0f7f94;
+    color: white;
+    font-size: 20px;
 }

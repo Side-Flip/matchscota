@@ -16,13 +16,19 @@
 
 .usuario{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 25% 40% 15%;
 }
 
 .usuario .logo{
     width: 80px;
     height: 80px;
 
+}
+
+.usuario .salir{
+    width: 80px;
+    height: 80px;
+    align-content: center;
 }
 
 .usuario .nombre{
@@ -212,6 +218,21 @@
     color: #146969;
     padding: 15px 40px 15px 15px;
     margin: 10px;
+}
 
+.menu .mascotas{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}
 
+.menu .chats{
+    background: #0f7f94;
+    color: white;
+}
+
+.menu .match{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
 }
