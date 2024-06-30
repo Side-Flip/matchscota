@@ -2,35 +2,37 @@ import React from 'react'
 import './Chats.css';
 import Logo from'./Logo.png';
 import Foto from'./silueta.jpg';
-import { Link, Redirect } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { FiLogOut } from "react-icons/fi";
 
 const Chats = () => {
+
   return (
     <div className='container'>
 
-<div className='estado'>
+      <div className='estado'>
 
-    <div className='busqueda'>
-      
-    </div>
-
-      <div className='usuario'>
-        <div className='logo'>
-          <img className='logo' src={Logo} />
-        </div>
+        <div className='busqueda'>
         
-        <div className='nombre'>
-          <label >José Luis</label>
         </div>
 
-        <div className='salir'>
-        <FiLogOut/>
+        <div className='usuario'>
+          <div className='logo'>
+            <img className='logo' src={Logo} />
+          </div>
+          
+          <div className='nombre'>
+            <label >José Luis</label>
+          </div>
+
+          <div className='salir'>
+            <Link className='logout' to={'/'}><FiLogOut/></Link>
+          
+          </div>
+          
         </div>
-        
+
       </div>
-
-    </div>
 
     <div className='contenido'>
 

@@ -25,7 +25,7 @@ const Perfil = () => {
           </div>
 
           <div className='salir'>
-            <FiLogOut />
+            <Link className='logout' to={'/'}><FiLogOut/></Link>
           </div>
           
         </div>
