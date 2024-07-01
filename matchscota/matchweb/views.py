@@ -6,6 +6,9 @@ from django.contrib.auth import login as auth_login, authenticate
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm, LoginForm
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.utils.decorators import method_decorator
+from django.views import View
 from db_connection import db
 import bcrypt
 

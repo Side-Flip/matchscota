@@ -6,22 +6,38 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login as auth_login
 from django.contrib import messages
 from rest_framework.permissions import IsAuthenticated
+from django.views.decorators.csrf import csrf_protect, csrf_exempt
+from django.utils.decorators import method_decorator
+from rest_framework.permissions import AllowAny
 from db_connection import db
 import bcrypt
-import logging
 
-logger = logging.getLogger(__name__)
+
+
+@method_decorator(csrf_exempt, name='dispatch')
 class RegisterView(APIView):
+    permission_classes = [AllowAny]
+    
     def post(self, request):
-        form = RegisterForm(request.data)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            password = form.cleaned_data['password']
+        serializer = RegisterSerializer(data=request.data)
+        if serializer.is_valid():
+            data = serializer.validated_data
+            password = data['contraseña']
             hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+
             users_collection = db['User']
-            users_collection.insert_one({'name': name, 'password': hashed_password})
+            users_collection.insert_one({
+                'Nombre': data['nombre'],
+                'Apellido': data['apellido'],
+                'Documento': data['documento'],
+                'telefono': data['telefono'],
+                'email': data['email'],
+                'contraseña': hashed_password
+            })
             return Response({'message': 'Registration successful'}, status=status.HTTP_201_CREATED)
-        return Response(form.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)@csrf_exempt
+
+
 
 class LoginView(APIView):
     def post(self, request):
