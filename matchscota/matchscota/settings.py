@@ -52,10 +52,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',  # URL del servidor de desarrollo de React
-]
-
+CORS_ORIGIN_ALLOW_ALL = True 
+CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'matchscota.urls'
 
 TEMPLATES = [
