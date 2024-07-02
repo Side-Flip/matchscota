@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .api_views import RegisterView, LoginView, UserProfileView
+from .api_views import RegisterView, LoginView, UserProfileView, RegisterMascotaView
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib.auth.views import LogoutView
 from django.http import JsonResponse
@@ -23,5 +23,6 @@ urlpatterns = [
     path('api/register/', RegisterView.as_view(), name='api_register'),
     path('api/login/', LoginView.as_view(), name='api_login'),
     path('api/profile/', UserProfileView.as_view(), name='api_user'),
-    path('api/get-csrf-token/', get_csrf_token, name='get-csfr-token')
+    path('api/get-csrf-token/', get_csrf_token, name='get-csfr-token'),
+    path('api/register-mascota/', RegisterMascotaView.as_view(), name='register-mascota')
 ]
