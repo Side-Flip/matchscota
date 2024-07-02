@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
     'matchweb'
 ]
 
@@ -48,8 +49,20 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
+CORS_ORIGIN_ALLOW_ALL = True 
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = False  # Para desarrollo, cambiar a True en producción
+#CSRF_USE_SESSIONS = True
+CSRF_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://localhost:8000'
+]
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000',
+]
 ROOT_URLCONF = 'matchscota.urls'
 
 TEMPLATES = [
@@ -69,6 +82,25 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'matchscota.wsgi.application'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 
 # Database

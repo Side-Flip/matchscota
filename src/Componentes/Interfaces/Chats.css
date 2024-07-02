@@ -1,0 +1,238 @@
+
+.container{  
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    background: transparent;
+    width: 100vmax;
+}
+
+.estado{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.usuario{
+    display: grid;
+    grid-template-columns: 25% 40% 15%;
+}
+
+.usuario .logo{
+    width: 80px;
+    height: 80px;
+
+}
+
+.usuario .salir{
+    width: 80px;
+    height: 80px;
+    align-content: center;
+}
+
+.usuario .nombre{
+    align-content: center;
+    font-size: 25px;
+    color: #146969;
+
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.contenido h1{
+    font-size: 28px;
+    text-align: center;
+    color: #146969;
+}
+
+.contenido h1{
+    font-size: 28px;
+    text-align: center;
+    color: #146969;
+}
+
+.listado{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: auto;
+    height: 430px;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 30px;
+    align-content: center;
+    align-items: center;
+}
+
+.lista{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: auto;
+    height: 430px;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 30px;
+    align-content: center;
+    align-items: center;
+    margin: 50px 150px;
+    padding: 0 30px;
+}
+
+.lista .mensajes{
+
+    width: 100%;
+    height: auto;
+    background: #82ccca44;
+    box-shadow: 0 0 1px rgba(0, 0, 0,.6);
+    color: #146969;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+
+
+
+.mensajes .dueño{
+    display: grid;
+    grid-template-columns: 12% 88%;
+    background: #82ccca44;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 6);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.dueño .d_logo{
+    align-content: center;
+    width: 50px;
+    height: 50px;
+
+}
+
+.dueño .d_nombre{
+    align-content: center;
+    font-size: 16px;
+    color: #146969;
+}
+
+.lista .mascota{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 15px;
+    align-content: center;
+    align-items: center;
+    margin: 10px 0 0 0;
+
+}
+
+.lista .lista_m{
+    width: 100%;
+    height: 370px;
+    overflow-y: scroll;
+    padding: 0 4px 0 4px;
+}
+
+.mascota .foto{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+ 
+.mascota .datos{
+    display: grid;
+    margin-left: 1px;
+}
+
+.datos label{
+    margin: 1px;
+    color: black;
+    font-size: 10px;
+}
+
+.datos .propietario{
+    font-size: 7px;
+    color: #146969;;
+}
+
+.menu{
+    display: felx;
+    grid-template-columns:25% 25% 25% 25%;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    align-content: center;
+}
+
+.menu .btn1{
+    width: 150px;
+    height: 100px;
+}
+
+.menu button{
+    width: 150px;
+    height: 100px;
+    background: #82ccca44;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    cursor: pointer;
+    color: #146969;
+    font-size: 20px;
+    display: block; 
+}
+
+.mensajes .chat{
+    display: flex;
+    width: 100%;
+    height: 280px;
+    background: #82ccca44;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 6);
+    color: #146969;
+    align-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.enviar_mensaje {
+    background: #82ccca44;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 6);
+}
+
+.enviar_mensaje input{
+    height: 30px;
+    width: 95%;
+    background: #82ccca88;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #146969;
+    padding: 15px 40px 15px 15px;
+    margin: 10px;
+}
+
+.menu .mascotas{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu .chats{
+    background: #0f7f94;
+    color: white;
+}
+
+.menu .match{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}

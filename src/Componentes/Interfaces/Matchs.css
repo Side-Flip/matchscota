@@ -1,0 +1,186 @@
+.container{  
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    background: transparent;
+    width: 100vmax;
+}
+
+.estado{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.usuario{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.usuario .logo{
+    width: 80px;
+    height: 80px;
+
+}
+
+.usuario .nombre{
+    align-content: center;
+    font-size: 25px;
+    color: #146969;
+
+}
+
+.usuario .salir{
+    width: 80px;
+    height: 80px;
+    align-content: center;
+}
+
+.busqueda select{
+    height: 30px;
+    background: #82ccca88;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #146969;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    font-size: 12.5px;
+    margin: 0 10px 0 10px;
+}
+
+.busqueda input{
+    height: 30px;
+    width: 95%;
+    background: #82ccca88;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #146969;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+
+}
+
+.contenido_m{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.contenido_m h1{
+    font-size: 28px;
+    text-align: center;
+    color: #146969;
+}
+
+.listado_m{
+    width: auto;
+    height: 430px;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 30px;
+    padding: 0 80px;
+    margin: 50px 150px;
+    align-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.listado_m .mascota_m{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: #82ccca44;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    color: #146969;
+    border-radius: 50px;
+    align-content: center;
+    align-items: center;
+    margin: 15px 0 0 0;
+}
+
+.mascota_m .foto_m{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+ 
+.mascota_m .datos_m{
+    display: grid;
+    margin-left: 30px;
+}
+
+.datos_m label{
+    margin: 5px;
+    color: black;
+}
+
+.mascota_m .enlaces_m{
+    display: grid;
+    margin-left: 30px;
+    font-size: 12px;
+    color: #146969;
+}
+
+.enlaces_m a{
+    margin: 3px;
+    color: #146969;
+}
+
+.menu_m{
+    display: felx;
+    grid-template-columns:25% 25% 25% 25%;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    align-content: center;
+}
+
+.menu_m .seleccion{
+    width: 150px;
+    height: 100px;
+}
+
+.menu_m select{
+    height: 30px;
+    background: #82ccca88;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #146969;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    font-size: 12.5px;
+
+}
+
+.menu_m button{
+    width: 150px;
+    height: 100px;
+    background: #82ccca44;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.6);
+    cursor: pointer;
+    color: #146969;
+    font-size: 20px;
+    display: block; 
+}
+
+.menu_m .mascotas{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu_m .chats{
+    color: #146969;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu_m .match{
+    background: #0f7f94;
+    color: white;
+    font-size: 20px;
+}
